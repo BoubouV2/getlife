@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 var client = new Discord.Client();
 var prefix = "!";
 var footer = ("Boubouv2")
-var footer2 = ('https://cdn.discordapp.com/attachments/358259912293351424/515940449698185218/logo2018.png')
+var footer2 = ('https://cdn.discordapp.com/attachments/414476552596619264/548133022029840384/Lgog_Offi_vide.png')
 var color = ("0x78eeff")
 
 client.on('message', message => {
@@ -32,7 +32,7 @@ client.on('message', message => {
 
     if (message.content === prefix + "help"){
         var embed = new Discord.RichEmbed()
-        .setTitle("<:logoPNG:516750176850018314> | Ci-dessous, les nombreuses commandes de GetLife.")
+        .setTitle("<:logoPNG:548133022029840384> | Ci-dessous, les nombreuses commandes de GetLife.")
         .addField("**__Commandes utiles:__**",`[${prefix}help](https://discord.gg/P3sKfsp) - Liste des commandes du bot. \n[${prefix}ping](https://discord.gg/P3sKfsp) - Ping de GetLife. \n[${prefix}users](https://discord.gg/P3sKfsp). Voir le nombre de personne sur le discord. \n[${prefix}invite](https://discord.gg/P3sKfsp). Invitation pour le discord GetLife. \n[${prefix}deaxlicorne](https://discord.gg/P3sKfsp). Lien twitch de notre Amie Deax. \n[${prefix}partenaire](https://discord.gg/P3sKfsp). Liste des partenaires et lien du formulaire.`)
         .addField("**__Commandes de modération:__**",`[${prefix}kick @user raison](https://discord.gg/P3sKfsp) - Exclure un utilisateur n'ayant pas respecter le règlement. \n[${prefix}ban @user raison](https://discord.gg/P3sKfsp) - Bannir un utilisateur dans un cas extrême.\n[${prefix}clear (nombre)](https://discord.gg/P3sKfsp) - Supprime un nombre x de message dans un salon. \n[${prefix}mute @user raison](https://discord.gg/P3sKfsp) - Mute un utilisateur n'ayant pas respecter le règlement.`)
         .setColor(color)
@@ -45,21 +45,21 @@ client.on('message', message => {
     if (message.content === prefix + "ping"){
         if(ping <= 99) {
              var embed = new Discord.RichEmbed()
-             .addField(`<:logoPNG:516750176850018314> | Latence du robot`, `:hourglass: | ${Math.round(client.ping)} ms.`)
+             .addField(`<:logoPNG:548133022029840384> | Latence du robot`, `:hourglass: | ${Math.round(client.ping)} ms.`)
              .setColor("0x7cc576")
              .setTimestamp()
              .setFooter(footer, footer2)
              message.channel.send(embed);
         } else if(ping <= 200) {
              var embed = new Discord.RichEmbed()
-             .addField(`<:logoPNG:516750176850018314> | Latence du robot`, `:hourglass: | ${Math.round(client.ping)} ms.`)
+             .addField(`<:logoPNG:548133022029840384> | Latence du robot`, `:hourglass: | ${Math.round(client.ping)} ms.`)
              .setColor("0xffe200")
              .setTimestamp()
              .setFooter(footer, footer2)
              message.channel.send(embed);
         } else if(ping <= 999) {
              var embed = new Discord.RichEmbed()
-             .addField(`<:logoPNG:516750176850018314> | Latence du robot`, `:hourglass_flowing_sand: | ${Math.round(client.ping)} ms.`)
+             .addField(`<:logoPNG:548133022029840384> | Latence du robot`, `:hourglass_flowing_sand: | ${Math.round(client.ping)} ms.`)
              .setColor("0xdb3328")
              .setTimestamp()
              .setFooter(footer, footer2)
@@ -69,21 +69,21 @@ client.on('message', message => {
     if (message.content === prefix + "users"){
          if(users <= 100) {
              var embed = new Discord.RichEmbed()
-             .addField("<:logoPNG:516750176850018314> | Membres du serveur", `👥 | ${users - getBotCount(member.guild)}  membres.`)
+             .addField("<:logoPNG:548133022029840384> | Membres du serveur", `👥 | ${users - getBotCount(member.guild)}  membres.`)
              .setColor("0xdb3328")
              .setTimestamp()
              .setFooter(footer, footer2)
              message.channel.send(embed);
         } else if(users <= 500) {
              var embed = new Discord.RichEmbed()
-             .addField("<:logoPNG:516750176850018314> | Membres du serveur", `👥 |  ${users - getBotCount(member.guild)}  membres.`)
+             .addField("<:logoPNG:548133022029840384> | Membres du serveur", `👥 |  ${users - getBotCount(member.guild)}  membres.`)
              .setColor("0xffe200")
              .setTimestamp()
              .setFooter(footer, footer2)
              message.channel.send(embed);
         } else if(users >= 999) {
              var embed = new Discord.RichEmbed()
-             .addField("<:logoPNG:516750176850018314> | Membres du serveur", `👥 | ${users - getBotCount(member.guild)} +  membres.`)
+             .addField("<:logoPNG:548133022029840384> | Membres du serveur", `👥 | ${users - getBotCount(member.guild)} +  membres.`)
              .setColor("0x7cc576")
              .setTimestamp()
              .setFooter(footer, footer2)
@@ -113,7 +113,7 @@ client.on('message', message => {
            if(!args[0]) return message.channel.send(ClearrEmbed);
             message.channel.bulkDelete(args[0]).then(() => {
                 var ClearEmbed = new Discord.RichEmbed()
-                .addField(`<:logoPNG:516750176850018314> | Nombre de message supprimé`,`🗑 | ${args[0]} messages.`)
+                .addField(`<:logoPNG:548133022029840384> | Nombre de message supprimé`,`🗑 | ${args[0]} messages.`)
                 .setColor(color)
                 .setTimestamp()
                 .setFooter(footer, footer2)
@@ -124,7 +124,7 @@ client.on('message', message => {
   
       if (message.content === prefix + "invite"){
             var embed = new Discord.RichEmbed()
-           .addField("<:logoPNG:516750176850018314> | Lien d'invitation", "📨 | https://discord.gg/P3sKfsp")
+           .addField("<:logoPNG:548133022029840384> | Lien d'invitation", "📨 | https://discord.gg/P3sKfsp")
            .setColor(color)
            .setTimestamp()
            .setFooter(footer, footer2)
@@ -133,7 +133,7 @@ client.on('message', message => {
         }
         if (message.content == prefix + "deaxlicorne"){
             var EmbedTwitter = new Discord.RichEmbed()
-            .addField("<:logoPNG:516750176850018314> | Lien d'AustelTV", `📺 | http://tv.austelclient.net/`)
+            .addField("<:logoPNG:548133022029840384> | Lien d'AustelTV", `📺 | http://tv.austelclient.net/`)
             .setColor(color)
             .setTimestamp()
             .setFooter(footer, footer2)
@@ -142,7 +142,7 @@ client.on('message', message => {
         }  
         if (message.content == prefix + "partenaires"){
             var EmbedTwitter = new Discord.RichEmbed()
-            .addField("<:logoPNG:516750176850018314> | Lien de partenariat", `📑 | https://goo.gl/forms/ghn1D2Ff5mABCciq2a`)
+            .addField("<:logoPNG:548133022029840384> | Lien de partenariat", `📑 | https://goo.gl/forms/ghn1D2Ff5mABCciq2a`)
             .setTimestamp()
             .setFooter(footer, footer2)
             message.delete()
@@ -197,7 +197,7 @@ client.on('message', async message => {
                 const memberToMute = message.guild.member(userToMute) || await message.guild.fetchMember(userToMute);
                 await memberToMute.addRole(role);
                 var MuteEmbed = new Discord.RichEmbed()
-                .addField(`<:logoPNG:516750176850018314> | Mute effectué`,`${message.mentions.users.first()} a été mute par <@` + message.member.id + `>.`)
+                .addField(`<:logoPNG:548133022029840384> | Mute effectué`,`${message.mentions.users.first()} a été mute par <@` + message.member.id + `>.`)
                 .setColor(color)
                 .setTimestamp()
                 .setFooter(footer, footer2)
@@ -234,7 +234,7 @@ client.on('message', async message => {
                 
                 await memberToMute.removeRole(role);
                 var MuteEmbed = new Discord.RichEmbed()
-                .addField(`<:logoPNG:516750176850018314> | Unmute effectué `,`${message.mentions.users.first()} a été demute par <@` + message.member.id + `>.`)
+                .addField(`<:logoPNG:548133022029840384> | Unmute effectué `,`${message.mentions.users.first()} a été demute par <@` + message.member.id + `>.`)
                 .setColor(color)
                 .setTimestamp()
                 .setFooter(footer, footer2)
@@ -282,7 +282,7 @@ client.on('message', async message => {
         member.ban(reason)
           .catch(error => message.reply(` ❓ | Désolé ${message.author} Je ne peux pas interdire à cause de: ${error}`));
           message.channel.send(new Discord.RichEmbed()
-          .addField(`<:logoPNG:516750176850018314> | Ban effectué`, `${message.mentions.members.first()} a été banni par <@` + message.member.id + `>. car: ${reason}`)
+          .addField(`<:logoPNG:548133022029840384> | Ban effectué`, `${message.mentions.members.first()} a été banni par <@` + message.member.id + `>. car: ${reason}`)
           .setColor(color)
           .setTimestamp()
           .setFooter(footer, footer2)).catch((error) => { console.log(error.message) });
@@ -328,7 +328,7 @@ client.on('message', async message => {
         }
          kickMember.kick().then(member => {
             var EmbedKick = new Discord.RichEmbed()
-            .addField(`<:logoPNG:516750176850018314> | Kick effectué`, `**${message.mentions.members.first()}** a été expulsé du discord par <@` + message.member.id + `>.`)
+            .addField(`<:logoPNG:548133022029840384> | Kick effectué`, `**${message.mentions.members.first()}** a été expulsé du discord par <@` + message.member.id + `>.`)
             .setColor(color)
             .setTimestamp()
             .setFooter(footer, footer2)
