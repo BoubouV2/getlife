@@ -32,7 +32,7 @@ client.on('guildMemberAdd', function(user) {
         embed.setColor("0x00ff00");
         embed.setTimestamp();
         embed.setThumbnail(user.user.displayAvatarURL);
-        user.guild.channels.find("name", "📕-staff-📕").sendEmbed(embed);
+        user.guild.channels.find("name", "teste").sendEmbed(embed);
         user.addRole(user.guild.roles.find("name", "Joueur"));
     
     user.send("Bienvenue sur le serveur Discord de la communauté GetLife ! Je suis Georges, le bot de cette communauté. Si besoin tu peux utiliser la commande **!help** !");
@@ -55,7 +55,7 @@ client.on("guildMemberRemove", function(user) {
         embed.setColor("0xff0000");
         embed.setTimestamp();
         embed.setThumbnail(user.user.displayAvatarURL);
-        user.guild.channels.find("name", "📕-staff-📕").sendEmbed(embed);
+        user.guild.channels.find("name", "teste").sendEmbed(embed);
 
     var games = [
         "!help | GetLife",
