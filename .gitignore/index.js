@@ -23,6 +23,50 @@ client.on('ready', function () {
 
 });
 
+client.on('guildMemberAdd', function(user) {
+    
+        const embed = new Discord.RichEmbed();
+        embed.setAuthor(user.displayName, user.user.displayAvatarURL)
+        embed.setTitle("Nouveau membre ! ✅");
+        embed.addField("Utilisateur", user.displayName);
+        embed.setColor("0x00ff00");
+        embed.setTimestamp();
+        embed.setThumbnail(user.user.displayAvatarURL);
+        user.guild.channels.find("name", "📕-staff-📕").sendEmbed(embed);
+        user.addRole(user.guild.roles.find("name", "Joueur"));
+    
+    user.send("Bienvenue sur le serveur Discord de la communauté GetLife ! Je suis Georges, le bot de cette communauté. Si besoin tu peux utiliser la commande **!help** !");
+    var games = [
+        "!help | GetLife",
+        "GetLife <3",
+        client.users.size + " utilisateurs !"
+    ]
+        client.user.setActivity(setInterval(function() {
+        client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url:"https://www.twitch.tv", type: "STREAMING"})
+    }, 5000))
+});
+
+client.on("guildMemberRemove", function(user) {
+
+        const embed = new Discord.RichEmbed();
+        embed.setAuthor(user.displayName, user.user.displayAvatarURL)
+        embed.setTitle("Membre partie ! ❌");
+        embed.addField("Utilisateur", user.displayName);
+        embed.setColor("0xff0000");
+        embed.setTimestamp();
+        embed.setThumbnail(user.user.displayAvatarURL);
+        user.guild.channels.find("name", "📕-staff-📕").sendEmbed(embed);
+
+    var games = [
+        "!help | GetLife",
+        "GetLife <3",
+        client.users.size + " utilisateurs !"
+    ]
+        client.user.setActivity(setInterval(function() {
+        client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url:"https://www.twitch.tv", type: "STREAMING"})
+    }, 3000))
+});
+
 client.on('message', message => {
     
     var ping = client.ping;
