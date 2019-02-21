@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 var client = new Discord.Client();
-var prefix = "A!";
-var footer = ("AustelEngine")
+var prefix = "!";
+var footer = ("Boubouv2")
 var footer2 = ('https://cdn.discordapp.com/attachments/358259912293351424/515940449698185218/logo2018.png')
 var color = ("0x78eeff")
 
@@ -13,13 +13,13 @@ client.on('message', message => {
 client.on('ready', function () {
 
     var games = [
-        "A!help | AustelBot V3.1",
-        "Développé par ElTHumeau et Anthony",
+        "!help | GetLife",
+        "Merci BoubouV2",
     ]
     client.user.setActivity(setInterval(function() {
-    client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url:"https://www.twitch.tv/AustelBot", type: "STREAMING"})}, 10000))
+    client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url:"https://www.twitch.tv/deax_licorne", type: "STREAMING"})}, 10000))
 
-    console.log("AustelBot V3 - Connecté");
+    console.log("GetLife - Connecté");
 
 });
 
@@ -32,9 +32,9 @@ client.on('message', message => {
 
     if (message.content === prefix + "help"){
         var embed = new Discord.RichEmbed()
-        .setTitle("<:logoPNG:516750176850018314> | Ci-dessous, les nombreuses commandes du AustelBot.")
-        .addField("**__Commandes utiles:__**",`[${prefix}help](https://discord.gg/mF9tEaW) - Liste des commandes du bot. \n[${prefix}ping](https://discord.gg/mF9tEaW) - Ping d'Austelbot. \n[${prefix}users](https://discord.gg/mF9tEaW). Voir le nombre de personne sur le discord. \n[${prefix}invite](https://discord.gg/mF9tEaW). Invitation pour le discord Austel Engine. \n[${prefix}austeltv](https://discord.gg/mF9tEaW). Lien twitch d'AustelTV. \n[${prefix}twitter](https://discord.gg/mF9tEaW). Lien twitter d'AustelEngine. \n[${prefix}partenaire](https://discord.gg/mF9tEaW). Liste des partenaires et lien du formulaire.`)
-        .addField("**__Commandes de modération:__**",`[${prefix}kick @user raison](https://discord.gg/mF9tEaW) - Exclure un utilisateur n'ayant pas respecter le règlement. \n[${prefix}ban @user raison](https://discord.gg/mF9tEaW) - Bannir un utilisateur dans un cas extrême.\n[${prefix}clear (nombre)](https://discord.gg/mF9tEaW) - Supprime un nombre x de message dans un salon. \n[${prefix}mute @user raison](https://discord.gg/mF9tEaW) - Mute un utilisateur n'ayant pas respecter le règlement.`)
+        .setTitle("<:logoPNG:516750176850018314> | Ci-dessous, les nombreuses commandes de GetLife.")
+        .addField("**__Commandes utiles:__**",`[${prefix}help](https://discord.gg/P3sKfsp) - Liste des commandes du bot. \n[${prefix}ping](https://discord.gg/P3sKfsp) - Ping de GetLife. \n[${prefix}users](https://discord.gg/P3sKfsp). Voir le nombre de personne sur le discord. \n[${prefix}invite](https://discord.gg/P3sKfsp). Invitation pour le discord GetLife. \n[${prefix}deaxlicorne](https://discord.gg/P3sKfsp). Lien twitch de notre Amie Deax. \n[${prefix}partenaire](https://discord.gg/P3sKfsp). Liste des partenaires et lien du formulaire.`)
+        .addField("**__Commandes de modération:__**",`[${prefix}kick @user raison](https://discord.gg/P3sKfsp) - Exclure un utilisateur n'ayant pas respecter le règlement. \n[${prefix}ban @user raison](https://discord.gg/P3sKfsp) - Bannir un utilisateur dans un cas extrême.\n[${prefix}clear (nombre)](https://discord.gg/P3sKfsp) - Supprime un nombre x de message dans un salon. \n[${prefix}mute @user raison](https://discord.gg/P3sKfsp) - Mute un utilisateur n'ayant pas respecter le règlement.`)
         .setColor(color)
         .setTimestamp()
         .setFooter(footer, footer2)
@@ -124,23 +124,14 @@ client.on('message', message => {
   
       if (message.content === prefix + "invite"){
             var embed = new Discord.RichEmbed()
-           .addField("<:logoPNG:516750176850018314> | Lien d'invitation", "📨 | https://discord.gg/mF9tEaW")
+           .addField("<:logoPNG:516750176850018314> | Lien d'invitation", "📨 | https://discord.gg/P3sKfsp")
            .setColor(color)
            .setTimestamp()
            .setFooter(footer, footer2)
            message.delete()
            message.channel.send(embed);
         }
-        if (message.content == prefix + "twitter"){
-            var EmbedTwitter = new Discord.RichEmbed()
-            .addField("<:logoPNG:516750176850018314> | Lien du twitter", `🐦| https://twitter.com/austelenginefr`)
-            .setColor(color)
-            .setTimestamp()
-            .setFooter(footer, footer2)
-            message.delete()
-            message.channel.send(EmbedTwitter)
-        }
-        if (message.content == prefix + "austeltv"){
+        if (message.content == prefix + "deaxlicorne"){
             var EmbedTwitter = new Discord.RichEmbed()
             .addField("<:logoPNG:516750176850018314> | Lien d'AustelTV", `📺 | http://tv.austelclient.net/`)
             .setColor(color)
