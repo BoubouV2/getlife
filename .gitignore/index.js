@@ -21,6 +21,6 @@ bot.on("message", async function(message) {
         message.channel.send("GetLife teste message");
         break;
     }
-})
+});
 
 bot.login(process.env.TOKEN);
