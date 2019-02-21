@@ -133,7 +133,7 @@ client.on('message', message => {
         }
         if (message.content == prefix + "deaxlicorne"){
             var EmbedTwitter = new Discord.RichEmbed()
-            .addField("<:logoPNG:548133022029840384> | Lien d'AustelTV", `📺 | http://tv.austelclient.net/`)
+            .addField("<:logoPNG:548133022029840384> | Lien de Deax_Licorne", `📺 | https://www.twitch.tv/deax_licorne`)
             .setColor(color)
             .setTimestamp()
             .setFooter(footer, footer2)
