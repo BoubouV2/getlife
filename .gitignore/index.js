@@ -357,4 +357,17 @@ client.on("guildMemberRemove", member => {
   member.guild.channels.find("name", "austel-chat").send(MemberLeaveEmbed);
 });
 
+client.on("guildMemberAdd", member => {
+    member.guild.channels.find("name", "🛫-𝒜𝐸𝑅𝒪𝒫𝒪𝑅𝒯-🛫").send('Bienvenue à toi ${member}');
+});
+
+client.on("guildMemberRemove", member => {
+    member.guild.channels.find("name", "🛫-𝒜𝐸𝑅𝒪𝒫𝒪𝑅𝒯-🛫").send('${member} vien de quitter');
+});
+
+client.on('guildMemberAdd', member => {
+    var role = member.guild.roles.find('name', 'Joueur');
+    member.addRole(role);
+});
+
 client.login(process.env.TOKEN);
