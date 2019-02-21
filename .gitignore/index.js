@@ -14,7 +14,7 @@ client.on('ready', function () {
 
     var games = [
         "!help | GetLife",
-        "Merci BoubouV2",
+        "Merci Zid !",
     ]
     client.user.setActivity(setInterval(function() {
     client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url:"https://www.twitch.tv/deax_licorne", type: "STREAMING"})}, 10000))
