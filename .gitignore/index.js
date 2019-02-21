@@ -142,7 +142,7 @@ client.on('message', message => {
         }  
         if (message.content == prefix + "partenaires"){
             var EmbedTwitter = new Discord.RichEmbed()
-            .addField("<:logoPNG:548133022029840384> | Lien de partenariat", `📑 | https://goo.gl/forms/ghn1D2Ff5mABCciq2a`)
+            .addField("<:logoPNG:548133022029840384> | Lien de partenariat", `📑 | pasencoredispo.getlife`)
             .setTimestamp()
             .setFooter(footer, footer2)
             message.delete()
