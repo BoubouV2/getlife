@@ -20,14 +20,14 @@ bot.on("message", async function(message) {
         case "invite":
         message.channel.send("", {
             embed: {
-                color: 0xFF0000
-                author: message.author.name
-                title:
+                color: 0xFF0000,
+                author: message.author.name,
+                title: '',
                 fields: [{
                     name: "Lien d'invitation",
                     value: "https://discord.gg/P3sKfsp",
                     inline: false
-                }]
+                }],
                 footer: {
                     footer: "Partager ce lien à tous vos amis !",
                 },
