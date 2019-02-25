@@ -1,9 +1,46 @@
 const Discord = require("discord.js");
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
+
+const adapter = new FileSync('databse.json');
+const db = low(adapter);
+
+db.defaults({ histoires: [, xp []}).write()
+
 var client = new Discord.Client();
 var prefix = "!";
 var footer = ("Boubouv2")
 var footer2 = ('https://cdn.discordapp.com/attachments/414476552596619264/548133022029840384/Lgog_Offi_vide.png')
 var color = ("0x78eeff")
+
+client.on('message', message => {
+
+    var msgauthor = message.author.id;
+
+    if(message.author.client)return;
+
+    if(!db.get("xp").find({user: msgauthor}).value()){
+        db.get("xp").push({user: msgauhtor, xp: 1}).write();
+    }else{
+        var userxpdb = db.get("xp").filter({user: msgauthor}).find('xp').value();
+        console.log(userxpdb);
+        var userxp = Object.values(userxpdb)
+        console.log(userxp)
+        console.log(`Nombre d'XP: ${userxp[1]}`)
+
+        db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write();
+
+    if (message.content === prefix + "xp"){
+        var xp = db.get("xp").filter({user: msgauthor}).find('xp').value()
+        var xpfinal = Object.values(xp);
+        var xp_embed = new Discord.RichEmbed()
+            .setTitle(`Stat des XP de ${message.author.username}`)
+            .setColor('#F4D03F')
+            .setDescription("Affichage des XP")
+            .addField("XP:", `${xpfinal[1]} xp`)
+            .setFooter("Enjoy :p")
+        message.channel.send({embed: xp_embed});
+});
 
 client.on('message', message => {
     var time = message.createdAt.toString().split(" ");
