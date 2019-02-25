@@ -10,6 +10,24 @@ client.on('message', message => {
     console.log(message.guild.name + ' | ' +  message.channel.name + ' > [' + time[4] + '] ' + message.author.tag + ": " + message.content);
 });
 
+client.on('message', data => {
+  if (data.content === 'Georges') {
+    data.channel.send('Georges Pompidou ? Ou moi ?');
+  }
+});
+
+client.on('message', data => {
+  if (data.content === 'iphone') {
+    data.channel.send('Non Samsung ! En plus ya le nouveau S10 qui vient de sortir !');
+  }
+});
+
+client.on('message', data => {
+  if (data.content === 'getlife') {
+    data.channel.send('Best server 4 ever !');
+  }
+});
+
 client.on('ready', function () {
 
     var games = [
